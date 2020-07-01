@@ -1,0 +1,41 @@
+/**
+ * Created by PanJiaChen on 16/11/18.
+ */
+
+/**
+ * @param {string} path
+ * @returns {Boolean}
+ */
+export function isExternal(path) {
+  return /^(https?:|mailto:|tel:)/.test(path)
+}
+
+/**
+ * @param {string} str
+ * @returns {Boolean}
+ */
+export function validEmail(str) {
+  return /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/.test(str);
+}
+
+/**
+ * @param {string} str
+ * @returns {Boolean}
+ */
+export function isString(str) {
+  if (typeof str === 'string' || str instanceof String) {
+    return true
+  }
+  return false
+}
+
+/**
+ * @param {Array} arg
+ * @returns {Boolean}
+ */
+export function isArray(arg) {
+  if (typeof Array.isArray === 'undefined') {
+    return Object.prototype.toString.call(arg) === '[object Array]'
+  }
+  return Array.isArray(arg)
+}
