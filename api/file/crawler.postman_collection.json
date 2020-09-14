@@ -1,0 +1,1806 @@
+{
+	"info": {
+		"_postman_id": "3863a97e-b412-475e-b19d-d09f33e4bb15",
+		"name": "crawler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "注册",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "origin",
+								"value": "http://localhost:9528",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"123123\",\r\n    \"email\": \"33394960311111@qq.com\",\r\n    \"password\": \"134324\",\r\n    \"authcode\": \"436371\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登录",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiREtNTUk0U0lQQkZLTzg2TTZDM0NCQURFUzI5TVE5TFYiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkwNTQ1NTE5LCJleHAiOjE1OTA4MDQ3MTl9.hPQbhnXGDvSaEwTGSATjyL45Bevr6K4Ul02uUVIqpkM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"3339496031@qq.com\",\r\n    \"password\": \"134324\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登出",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzI4Mjg0LCJleHAiOjE1OTI5ODc0ODR9.oyZmXRkEPFMPo0AUdkv2QBXuKc2IoRtot2ZzFnYOGUA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取用户详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/T0BNO4SMGEOUAWMHWKECJWZMSRHPUUM3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"T0BNO4SMGEOUAWMHWKECJWZMSRHPUUM3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改用户信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "portrait",
+									"value": "/public/images/20200622/1592830578477.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取用户列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "自己的信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYwMDU1LCJleHAiOjE1OTM1NjQ4NTV9.O_ng1MBFzUhwmOJlu_cmeYpfFj1OqEsqD330CzL5qxM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "项目",
+			"item": [
+				{
+					"name": "创建项目",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "小说网站",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/project",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除项目",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pid",
+									"value": "QHYHI3NKG6KI198EXT4OEPEC4661W99Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/project/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取项目列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/project?page=1.1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1.1"
+								},
+								{
+									"key": "order",
+									"value": "desc12",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改项目",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pid",
+									"value": "3E2ELXJ2O3K7X9RKVBDCQMRDGROCYGPX",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "我是小可爱",
+									"type": "text"
+								},
+								{
+									"key": "describe",
+									"value": "这是一个测试的项目",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/project/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取项目",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/project/QHYHI3NKG6KI198EXT4OEPEC4661W99Z",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"QHYHI3NKG6KI198EXT4OEPEC4661W99Z"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "爬虫分类",
+			"item": [
+				{
+					"name": "添加分类",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "搜索",
+									"type": "text"
+								},
+								{
+									"key": "set",
+									"value": "{}",
+									"type": "text"
+								},
+								{
+									"key": "pid",
+									"value": "QHYHI3NKG6KI198EXT4OEPEC4661W99Z",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/type",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取分类列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pid",
+									"value": "QHYHI3NKG6KI198EXT4OEPEC4661W99Z",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "asdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/type?pid=QHYHI3NKG6KI198EXT4OEPEC4661W99Z&page=",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"type"
+							],
+							"query": [
+								{
+									"key": "pid",
+									"value": "QHYHI3NKG6KI198EXT4OEPEC4661W99Z"
+								},
+								{
+									"key": "page",
+									"value": ""
+								},
+								{
+									"key": "order",
+									"value": "as",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "分类下的所有爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/reptile/type/1KO1MR7CFSF4JTJCKD3NCJD86SF61BIC",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"type",
+								"1KO1MR7CFSF4JTJCKD3NCJD86SF61BIC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除分类",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rid",
+									"value": "VOIH0B1HCLW11MUHHT3GWQUSJ9MXCLYV",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/type/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"type",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改分类",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rid",
+									"value": "ZNL23E0U7F9IAROQ7SZF56E0BXX40XRX",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/type/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"type",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "爬虫",
+			"item": [
+				{
+					"name": "创建爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "日天博客",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "set",
+								"value": "{\"href\": \"https://rtian.me/\", \"field\": {\"menu\": [\"v:.menu,li\", {\"title\": \"v:a|text\"}]}, \"type\": \"dom\"}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "describe",
+								"value": "日天的博客",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "type_id",
+								"value": "1",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "国开test",
+									"type": "text"
+								},
+								{
+									"key": "set",
+									"value": "{\"href\": \"http://jiangxi.ouchn.cn/mod/quiz/review.php?attempt=7233225\",  \"type\": \"dom\", \"field\": {\"list\": \"text\"}}",
+									"type": "text"
+								},
+								{
+									"key": "describe",
+									"value": "付费的代理ip",
+									"type": "text"
+								},
+								{
+									"key": "rid",
+									"value": "1KO1MR7CFSF4JTJCKD3NCJD86SF61BIC",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rid",
+									"value": "JY076X39ACV9CJJDF36X1FGFG1U6FIBE",
+									"type": "text"
+								},
+								{
+									"key": "public",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "describe",
+									"value": "算了了了了来了 ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "set",
+									"value": "{\"href\": \"http://api.hailiangip.com:8422/api/getIp?type=1&num=100&pid=&unbindTime=1800&cid=&orderId=O20061522100120451466&time=1592816772&sign=cb638e433f6468f662b53d82c72cb589&noDuplicate=1&dataType=0&lineSeparator=0&singleIp=0\",  \"type\": \"api\", \"field\":  {\"list\": \"v:data|list:ip,port\"}, \"cache\": {\"time\":  108000, \"enable\": true}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "执行爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rid",
+									"value": "B6RJB8HVZG8IP3U8R1X7E8EXM1HRQ4JA",
+									"type": "text"
+								},
+								{
+									"key": "cache",
+									"value": "false",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "set",
+									"value": "{\"headers\": {\"Cookie\": \"MoodleSession=d6db817582a4e5272cebca4aab643713\"}}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/run",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"run"
+							],
+							"query": [
+								{
+									"key": "num",
+									"value": "100",
+									"disabled": true
+								},
+								{
+									"key": "test",
+									"value": "1234",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rid",
+									"value": "VE9LLIXJ5CZ1Q0A9E95QNPC0AUS17QBQ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "模拟执行爬虫",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "set",
+									"value": "{\"href\":\"http://api.hailiangip.com:8422/api/getIp?type=1&num=100&pid=&unbindTime=1800&cid=&orderId=O20061522100120451466&time=1592816772&sign=cb638e433f6468f662b53d82c72cb589&noDuplicate=1&dataType=0&lineSeparator=0&singleIp=0\",\"type\":\"api\",\"field\":{\"list\":\"v:data|list:ip,port\"},\"cache\":{\"time\":108000,\"enable\":true}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/reptile/run/mock",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"run",
+								"mock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "单个爬虫信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/reptile/detail/VSRYCJGX7TMBX8GM3LGP1IAKWB7BPBJF",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"detail",
+								"VSRYCJGX7TMBX8GM3LGP1IAKWB7BPBJF"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "配置",
+			"item": [
+				{
+					"name": "创建配置",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "key",
+									"value": "request-fillable-params",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "{\"list\": [\"query\", \"headers\", \"proxyEnable\"]}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/config",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改配置",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "key",
+									"value": "request-domain-white-list",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "{\"list\": [\"http://localhost:9528\"]}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/config/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"config",
+								"update"
+							],
+							"query": [
+								{
+									"key": "request-domain-white-list",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取配置",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "key",
+									"value": "request-proxy-ip",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/config/request-proxy-ip",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"config",
+								"request-proxy-ip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除配置",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "key",
+									"value": "request-proxy-ip-test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/config/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"config",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "配置列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/config",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"config"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "定时任务",
+			"item": [
+				{
+					"name": "创建定时任务",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cron",
+									"value": "* 25 * * * *",
+									"type": "text"
+								},
+								{
+									"key": "rid",
+									"value": "JY076X39ACV9CJJDF36X1FGFG1U6FIBE",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "代理ip",
+									"type": "text"
+								},
+								{
+									"key": "query",
+									"value": "{\"query\": \"我试试\"}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/schedule",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改定时任务",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sid",
+									"value": "0GD4FDR69LDMFI8ZYK5UV2CLJ4AEKBM6",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cron",
+									"value": "0 0/30 * * * *",
+									"type": "text"
+								},
+								{
+									"key": "set",
+									"value": "null",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/schedule/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schedule",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "定时任务列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/schedule/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schedule",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "工具",
+			"item": [
+				{
+					"name": "上传图片",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzg1MzI0LCJleHAiOjE1OTMwNDQ1MjR9.Ix4xjLg8UZlZwd3o5DF_r_11KVexCF6Bc6tN6Og2Nug",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiOTNGTTBGNUhSTVVaVTlVS0U1QTZNMFQ4WkVVVjRQOVoiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNDQ0ODQ0LCJleHAiOjE1OTMwNDk2NDR9.Xav_jb_Sdh0dVytTVGp27M4Px41OMiVHIUNsEq4KZWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "test",
+									"type": "file",
+									"src": "/C:/Users/worldskills/Pictures/n1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/upload/image",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"upload",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "发送验证码",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"3339496031@qq.com\",\r\n    \"type\": \"create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/authcode",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "仪表盘数据",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYwMDU1LCJleHAiOjE1OTM1NjQ4NTV9.O_ng1MBFzUhwmOJlu_cmeYpfFj1OqEsqD330CzL5qxM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/dashboard",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "日志",
+			"item": [
+				{
+					"name": "获取爬虫日志粗略信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/reptile/log/dashboard?type=month",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"log",
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "JY076X39ACV9CJJDF36X1FGFG1U6FIBE",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "month"
+								},
+								{
+									"key": "sid",
+									"value": "0GD4FDR69LDMFI8ZYK5UV2CLJ4AEKBM6",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取日志列表",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYwMDU1LCJleHAiOjE1OTM1NjQ4NTV9.O_ng1MBFzUhwmOJlu_cmeYpfFj1OqEsqD330CzL5qxM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/reptile/log/list?type=month&sid=0GD4FDR69LDMFI8ZYK5UV2CLJ4AEKBM6&order=asc",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"log",
+								"list"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "JY076X39ACV9CJJDF36X1FGFG1U6FIBE",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "month"
+								},
+								{
+									"key": "sid",
+									"value": "0GD4FDR69LDMFI8ZYK5UV2CLJ4AEKBM6"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "单个日志信息",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyOTYyMTIxLCJleHAiOjE1OTMyMjEzMjF9.dnONq_RhZzjE_YQ3I111d4P876ANQ9qOV12uIaVH2J8",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidWlkIjoiVDBCTk80U01HRU9VQVdNSFdLRUNKV1pNU1JIUFVVTTMiLCJzY29wZSI6IjMyIiwiaWF0IjoxNTkyNzM3ODY1LCJleHAiOjE1OTI5OTcwNjV9.kCPdBIOnNO9wWn11ZNRtI-72uEZ_0x3aEXYL1xXUDpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/reptile/log/detail/200",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reptile",
+								"log",
+								"detail",
+								"200"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

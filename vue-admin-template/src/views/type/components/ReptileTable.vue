@@ -32,7 +32,7 @@
       </el-table-column>
       <el-table-column label="创建人" width="110" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.user.username }}</span>
+          <span>{{ scope.row.user ? scope.row.user.username : '用户已删除' }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" prop="updated_at" label="操作" width="160">

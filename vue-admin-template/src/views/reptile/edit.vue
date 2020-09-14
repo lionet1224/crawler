@@ -111,7 +111,7 @@ export default {
         })
       } else {
         create({
-          ...this.form
+          ...this.form, rid: this.$route.params.rid
         }).then(res => {
           this.$notify.success('创建成功');
           this.onCancel();
